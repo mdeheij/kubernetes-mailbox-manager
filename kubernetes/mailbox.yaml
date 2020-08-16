@@ -1,0 +1,7 @@
+apiVersion: "k8smailman.mdeheij.nl/v1"
+kind: Mailbox
+metadata:
+  name: some-client
+spec:
+  emailAddress: "some@client.local"
+  passwordHash: "{SHA512-CRYPT}$6$something"
