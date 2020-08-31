@@ -15,7 +15,6 @@ type MailboxInterface interface {
 	Get(name string, options metav1.GetOptions) (*v1.Mailbox, error)
 	Create(*v1.Mailbox) (*v1.Mailbox, error)
 	Watch(opts metav1.ListOptions) (watch.Interface, error)
-	// ...
 }
 
 type mailboxClient struct {
