@@ -9,11 +9,10 @@ import (
 const GroupName = "k8smailman.mdeheij.nl"
 const GroupVersion = "v1"
 
-var SchemeGroupVersion = schema.GroupVersion{Group: GroupName, Version: GroupVersion}
-
 var (
-	SchemeBuilder = runtime.NewSchemeBuilder(addKnownTypes)
-	AddToScheme   = SchemeBuilder.AddToScheme
+	SchemeGroupVersion = schema.GroupVersion{Group: GroupName, Version: GroupVersion}
+	SchemeBuilder      = runtime.NewSchemeBuilder(addKnownTypes)
+	AddToScheme        = SchemeBuilder.AddToScheme
 )
 
 func addKnownTypes(scheme *runtime.Scheme) error {
