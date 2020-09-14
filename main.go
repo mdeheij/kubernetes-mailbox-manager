@@ -26,7 +26,7 @@ func main() {
 	}
 
 	if err != nil {
-		panic(err)
+		log.Fatalln(err)
 	}
 
 	if err := v1.AddToScheme(scheme.Scheme); err != nil {
@@ -35,7 +35,7 @@ func main() {
 
 	clientSet, err := clientV1.NewForConfig(config)
 	if err != nil {
-		panic(err)
+		log.Fatalln(err)
 	}
 
 	stop := make(chan struct{})
