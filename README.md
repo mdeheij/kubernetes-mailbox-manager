@@ -44,7 +44,7 @@ spec:
     #   imagePullSecrets:                       # Optional
     #   - name: <private registry secret>
       containers:
-      - image: registry.mikedeheij.nl/kubernetes-mailbox-manager
+      - image: docker.pkg.github.com/mdeheij/kubernetes-mailbox-manager/app:latest
         name: controller
 ```
 
