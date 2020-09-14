@@ -6,7 +6,7 @@ import (
 	"k8s.io/apimachinery/pkg/runtime/schema"
 )
 
-const GroupName = "k8smailman.mdeheij.nl"
+const GroupName = "k8smailman.mikedeheij.nl"
 const GroupVersion = "v1"
 
 var (

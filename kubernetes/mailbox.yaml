@@ -1,4 +1,4 @@
-apiVersion: "k8smailman.mdeheij.nl/v1"
+apiVersion: "k8smailman.mikedeheij.nl/v1"
 kind: Mailbox
 metadata:
   name: some-client
