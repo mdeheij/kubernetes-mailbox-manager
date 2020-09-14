@@ -9,7 +9,7 @@ This file can then be supplied as a ConfigMap to any postfix-running setup such 
 
 ## Mailbox
 
-_Make sure the Custom Resource Definition is applied._
+_Make sure the [Mailbox Custom Resource Definition](kubernetes/crd.yaml) is applied._
 
 ```yaml
 apiVersion: "k8smailman.mdeheij.nl/v1"
