@@ -1,8 +1,8 @@
 package main
 
 import (
-	"flag"
 	"log"
+	"os"
 
 	v1 "github.com/mdeheij/kubernetes-mailbox-manager/api/types/v1"
 	clientV1 "github.com/mdeheij/kubernetes-mailbox-manager/clientset/v1"
@@ -11,18 +11,13 @@ import (
 	"k8s.io/client-go/tools/clientcmd"
 )
 
-var kubeconfig string
-
-func init() {
-	flag.StringVar(&kubeconfig, "kubeconfig", "", "path to Kubernetes config file")
-	flag.Parse()
-}
+const KubernetesConfigPathEnv = "K8SMAILMAN_KUBE_CONFIG"
 
 func main() {
 	var config *rest.Config
 	var err error
 
-	if kubeconfig == "" {
+	if kubeconfig := os.Getenv(KubernetesConfigPathEnv); kubeconfig == "" {
 		log.Printf("using in-cluster configuration")
 		config, err = rest.InClusterConfig()
 	} else {

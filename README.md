@@ -70,3 +70,18 @@ spec:
         name: kubernetes-mailbox-manager
   restartPolicy: Never
 ```
+
+# Development
+
+This application requires Go version 1.11 or higher. 
+
+## Configuration
+
+`K8SMAILMAN_KUBE_CONFIG` can be set to contain a path to a Kubernetes client configuration file (e.g. `~/.kube/config`).
+
+## Building and usage
+
+```bash
+go install ./...
+K8SMAILMAN_KUBE_CONFIG="${HOME}/.kube/config" kubernetes-mailbox-manager
+```
